@@ -1,0 +1,92 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.0.15 Chrome/132.0.6834.196 Electron/34.2.0 Safari/537.36" version="26.0.15">
+  <diagram name="DFD Level 2" id="0">
+    <mxGraphModel dx="1632" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="lt1" value="Hearts Card Game - Data Flow Diagram (Level 2: Trick Processing)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=24;fontStyle=1;fontColor=#111827;" parent="1" vertex="1">
+          <mxGeometry x="330" y="20" width="940" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="l2e1" value="Player / User" style="shape=mxgraph.flowchart.terminator;whiteSpace=wrap;html=1;fillColor=#DCFCE7;strokeColor=#15803D;fontSize=14;align=center;verticalAlign=middle;fontColor=#111827;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="10" y="370" width="210" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="l2p1" value="2.1 Validate Turn" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeColor=#1D4ED8;fillColor=#DBEAFE;fontSize=14;align=center;verticalAlign=middle;fontColor=#111827;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="360" y="110" width="250" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="l2p2" value="2.2 Get Valid Cards" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeColor=#1D4ED8;fillColor=#DBEAFE;fontSize=14;align=center;verticalAlign=middle;fontColor=#111827;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="360" y="240" width="250" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="l2p3" value="2.3 Select Card(Human or AI)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeColor=#1D4ED8;fillColor=#DBEAFE;fontSize=14;align=center;verticalAlign=middle;fontColor=#111827;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="360" y="370" width="250" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="l2p4" value="2.4 Update Trick State" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeColor=#1D4ED8;fillColor=#DBEAFE;fontSize=14;align=center;verticalAlign=middle;fontColor=#111827;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="360" y="500" width="250" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="l2p5" value="2.5 Resolve Trick Winner" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeColor=#1D4ED8;fillColor=#DBEAFE;fontSize=14;align=center;verticalAlign=middle;fontColor=#111827;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="360" y="630" width="250" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="l2p6" value="2.6 Send Winner / Score Update" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeColor=#1D4ED8;fillColor=#DBEAFE;fontSize=14;align=center;verticalAlign=middle;fontColor=#111827;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="360" y="860" width="250" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="l2d1" value="D1: Player Hand Data list[Card] / collections" style="shape=partialRectangle;whiteSpace=wrap;html=1;fillColor=#EDE9FE;strokeColor=#7C3AED;fontSize=14;align=center;verticalAlign=middle;fontColor=#111827;strokeWidth=2;top=0;left=0;right=0;bottom=0;" parent="1" vertex="1">
+          <mxGeometry x="820" y="110" width="330" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="l2d2" value="D2: Current Trick Data lead, trick_cards, turn order" style="shape=partialRectangle;whiteSpace=wrap;html=1;fillColor=#EDE9FE;strokeColor=#7C3AED;fontSize=14;align=center;verticalAlign=middle;fontColor=#111827;strokeWidth=2;top=0;left=0;right=0;bottom=0;" parent="1" vertex="1">
+          <mxGeometry x="820" y="300" width="330" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="l2d3" value="D3: Round Statehearts_broken, tricks won" style="shape=partialRectangle;whiteSpace=wrap;html=1;fillColor=#EDE9FE;strokeColor=#7C3AED;fontSize=14;align=center;verticalAlign=middle;fontColor=#111827;strokeWidth=2;top=0;left=0;right=0;bottom=0;" parent="1" vertex="1">
+          <mxGeometry x="860" y="560" width="330" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="l2d4" value="D4: Score Data penalty totals&amp;nbsp; winner" style="shape=partialRectangle;whiteSpace=wrap;html=1;fillColor=#EDE9FE;strokeColor=#7C3AED;fontSize=14;align=center;verticalAlign=middle;fontColor=#111827;strokeWidth=2;top=0;left=0;right=0;bottom=0;" parent="1" vertex="1">
+          <mxGeometry x="820" y="760" width="330" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="l2e2" value="GUI / Output" style="shape=mxgraph.flowchart.terminator;whiteSpace=wrap;html=1;fillColor=#DCFCE7;strokeColor=#15803D;fontSize=14;align=center;verticalAlign=middle;fontColor=#111827;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="1350" y="430" width="210" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="l2a1" value="chosen card" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#374151;strokeWidth=2.5;fontSize=12;fontColor=#111827;" parent="1" source="l2e1" target="l2p3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l2a2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#374151;strokeWidth=2.5;fontSize=12;fontColor=#111827;" parent="1" source="l2p1" target="l2p2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l2a3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#374151;strokeWidth=2.5;fontSize=12;fontColor=#111827;" parent="1" source="l2p2" target="l2p3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l2a4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#374151;strokeWidth=2.5;fontSize=12;fontColor=#111827;" parent="1" source="l2p3" target="l2p4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l2a5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#374151;strokeWidth=2.5;fontSize=12;fontColor=#111827;" parent="1" source="l2p4" target="l2p5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l2a6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#374151;strokeWidth=2.5;fontSize=12;fontColor=#111827;" parent="1" source="l2p5" target="l2p6" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l2a7" value="read hand / turn" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#374151;strokeWidth=2.5;fontSize=12;fontColor=#111827;" parent="1" source="l2p1" target="l2d1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l2a8" value="filter cards" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#374151;strokeWidth=2.5;fontSize=12;fontColor=#111827;" parent="1" source="l2p2" target="l2d1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l2a9" value="append play" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#374151;strokeWidth=2.5;fontSize=12;fontColor=#111827;" parent="1" source="l2p4" target="l2d2" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="985" y="540" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="l2a10" value="update hearts_broken" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#374151;strokeWidth=2.5;fontSize=12;fontColor=#111827;" parent="1" source="l2p4" target="l2d3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l2a11" value="winner / penalties" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#374151;strokeWidth=2.5;fontSize=12;fontColor=#111827;" parent="1" source="l2p5" target="l2d4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l2a12" value="refresh UI" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#374151;strokeWidth=2.5;fontSize=12;fontColor=#111827;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="l2p6" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="630" y="908" as="sourcePoint" />
+            <mxPoint x="1465" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
