@@ -1,0 +1,123 @@
+==============================================================================
+  HEARTS CARD GAME — USER GUIDE
+  Group 2  |  COSC-2200-03  |  Durham College
+==============================================================================
+
+HOW TO START
+─────────────
+1. Put all 6 files in one folder:
+     main.py, gui.py, logic.py, player.py, deck.py, card.py
+
+2. Open Terminal (Cmd + Space → type Terminal → Enter)
+
+3. Navigate to your folder:
+     cd Desktop/Games
+
+4. Run the game:
+     python3 main.py
+
+5. The game window opens. Choose 50 or 100 Points, then click Start Game.
+
+
+THE MENU
+─────────
+  Start Game     → Choose score limit and begin
+  Rules          → Full rules popup
+  My Statistics  → See your win/loss record
+  Exit           → Close the game
+
+
+SCORE LIMIT
+────────────
+  50 Points  — shorter game (~20 minutes)
+  100 Points — longer game  (~45 minutes)
+
+The game ends when any player reaches the limit.
+The player with the LOWEST score wins!
+
+
+THE TABLE
+──────────
+  AI 2 ★ sits at the TOP    (Smart AI - may try Shoot the Moon)
+  AI 1   sits on the LEFT
+  AI 3   sits on the RIGHT
+  You    sit at the BOTTOM
+
+  Centre boxes show what each player played this trick.
+  The right panel shows all game events.
+  The left panel shows total scores and game status.
+
+
+YOUR HAND
+──────────
+  Your 13 cards are shown at the bottom.
+  Bright yellow cards = you CAN play them (click to play)
+  Grey cards          = not allowed right now
+
+  Hover your mouse over any card to see its name and point value.
+
+
+PLAYING A CARD
+───────────────
+  Option 1: Click a bright yellow card
+  Option 2: Press Enter to play the first valid card automatically
+  Option 3: Click "Show Valid Cards" to see which cards are allowed
+
+
+RULES SUMMARY
+──────────────
+  Follow Suit:   If the first card played is a Club, you must play
+                 a Club if you have one. Same for all suits.
+
+  No matching:   If you have no cards of the lead suit, you can
+                 play any card (great chance to dump penalty cards!)
+
+  Hearts Lead:   You cannot lead with a Heart until Hearts are
+                 "broken" (someone played a Heart earlier).
+
+  Scoring:
+    ♥ Each Heart     = 1 penalty point
+    ♠ Queen of Spades = 5 penalty points
+    Lowest score WINS
+
+  Shoot the Moon:
+    If one player collects ALL Hearts + Queen of Spades (18 pts):
+    → That player scores 0
+    → Everyone else scores +18
+    Watch AI 2 ★ — it tries this strategy!
+
+
+BETWEEN ROUNDS
+───────────────
+  After all 13 tricks, scores are updated.
+  Click "Next Round" to deal new cards.
+  The game continues until someone hits the score limit.
+
+
+KEYBOARD SHORTCUTS
+───────────────────
+  Enter   →  Play the first valid card
+  Escape  →  Quit (asks for confirmation)
+
+
+FILES CREATED WHILE PLAYING
+─────────────────────────────
+  scores.json  — your win/loss record (loaded next time you play)
+  game_log.txt — every card played, timestamped
+
+
+TROUBLESHOOTING
+────────────────
+  "python3: command not found"
+    → Download Python 3 from https://python.org
+
+  Game window does not open
+    → Make sure all 6 .py files are in the SAME folder
+    → Run main.py, not gui.py
+
+  Cards not showing
+    → Close the window and run python3 main.py again
+
+==============================================================================
+  Group 2 — Arun Kumar, Sujay Tailor, Jeel Suthar, Darsh Patel, Rudra Chauhan
+==============================================================================

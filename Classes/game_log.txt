@@ -1,0 +1,118 @@
+[2026-03-31 00:49:21] === NEW GAME STARTED (limit: 50) ===
+[2026-03-31 00:49:21] Round 1 dealt.
+[2026-03-31 00:49:22] === NEW GAME STARTED (limit: 50) ===
+[2026-03-31 00:49:22] Round 1 dealt.
+[2026-03-31 00:49:22] === NEW GAME STARTED (limit: 50) ===
+[2026-03-31 00:49:22] Round 1 dealt.
+[2026-03-31 00:49:22] === NEW GAME STARTED (limit: 50) ===
+[2026-03-31 00:49:22] Round 1 dealt.
+[2026-03-31 00:49:22] === NEW GAME STARTED (limit: 50) ===
+[2026-03-31 00:49:22] Round 1 dealt.
+[2026-03-31 00:49:22] === NEW GAME STARTED (limit: 50) ===
+[2026-03-31 00:49:22] Round 1 dealt.
+[2026-03-31 00:49:22] === NEW GAME STARTED (limit: 50) ===
+[2026-03-31 00:49:22] Round 1 dealt.
+[2026-03-31 00:49:23] === NEW GAME STARTED (limit: 50) ===
+[2026-03-31 00:49:23] Round 1 dealt.
+[2026-03-31 00:49:23] === NEW GAME STARTED (limit: 50) ===
+[2026-03-31 00:49:23] Round 1 dealt.
+[2026-03-31 00:49:23] === NEW GAME STARTED (limit: 50) ===
+[2026-03-31 00:49:23] Round 1 dealt.
+[2026-03-31 00:49:23] === NEW GAME STARTED (limit: 50) ===
+[2026-03-31 00:49:23] Round 1 dealt.
+[2026-03-31 00:49:24] === NEW GAME STARTED (limit: 50) ===
+[2026-03-31 00:49:24] Round 1 dealt.
+[2026-03-31 00:49:25] === NEW GAME STARTED (limit: 50) ===
+[2026-03-31 00:49:25] Round 1 dealt.
+[2026-03-31 00:49:26] === NEW GAME STARTED (limit: 50) ===
+[2026-03-31 00:49:26] Round 1 dealt.
+[2026-03-31 00:49:27] === NEW GAME STARTED (limit: 50) ===
+[2026-03-31 00:49:27] Round 1 dealt.
+[2026-03-31 00:49:28] === NEW GAME STARTED (limit: 50) ===
+[2026-03-31 00:49:28] Round 1 dealt.
+[2026-03-31 00:49:28] === NEW GAME STARTED (limit: 50) ===
+[2026-03-31 00:49:28] Round 1 dealt.
+[2026-03-31 00:49:28] === NEW GAME STARTED (limit: 50) ===
+[2026-03-31 00:49:28] Round 1 dealt.
+[2026-03-31 00:49:28] === NEW GAME STARTED (limit: 50) ===
+[2026-03-31 00:49:28] Round 1 dealt.
+[2026-03-31 00:49:28] === NEW GAME STARTED (limit: 50) ===
+[2026-03-31 00:49:28] Round 1 dealt.
+[2026-03-31 00:49:28] === NEW GAME STARTED (limit: 50) ===
+[2026-03-31 00:49:28] Round 1 dealt.
+[2026-03-31 00:49:29] === NEW GAME STARTED (limit: 50) ===
+[2026-03-31 00:49:29] Round 1 dealt.
+[2026-03-31 00:49:29] === NEW GAME STARTED (limit: 50) ===
+[2026-03-31 00:49:29] Round 1 dealt.
+[2026-03-31 00:49:29] === NEW GAME STARTED (limit: 50) ===
+[2026-03-31 00:49:29] Round 1 dealt.
+[2026-03-31 00:49:29] === NEW GAME STARTED (limit: 50) ===
+[2026-03-31 00:49:29] Round 1 dealt.
+[2026-03-31 00:49:29] === NEW GAME STARTED (limit: 50) ===
+[2026-03-31 00:49:29] Round 1 dealt.
+[2026-03-31 00:49:29] === NEW GAME STARTED (limit: 50) ===
+[2026-03-31 00:49:29] Round 1 dealt.
+[2026-03-31 00:49:30] === NEW GAME STARTED (limit: 50) ===
+[2026-03-31 00:49:30] Round 1 dealt.
+[2026-03-31 00:49:30] === NEW GAME STARTED (limit: 50) ===
+[2026-03-31 00:49:30] Round 1 dealt.
+[2026-03-31 00:49:30] === NEW GAME STARTED (limit: 50) ===
+[2026-03-31 00:49:30] Round 1 dealt.
+[2026-03-31 00:49:56] === NEW GAME STARTED (limit: 50) ===
+[2026-03-31 00:49:56] Round 1 dealt.
+[2026-03-31 00:49:58] === NEW GAME STARTED (limit: 100) ===
+[2026-03-31 00:49:58] Round 1 dealt.
+[2026-03-31 00:50:01] === NEW GAME STARTED (limit: 50) ===
+[2026-03-31 00:50:01] Round 1 dealt.
+[2026-03-31 00:50:01] === NEW GAME STARTED (limit: 50) ===
+[2026-03-31 00:50:01] Round 1 dealt.
+[2026-03-31 00:50:01] === NEW GAME STARTED (limit: 50) ===
+[2026-03-31 00:50:01] Round 1 dealt.
+[2026-03-31 00:50:01] === NEW GAME STARTED (limit: 50) ===
+[2026-03-31 00:50:01] Round 1 dealt.
+[2026-03-31 00:50:02] === NEW GAME STARTED (limit: 50) ===
+[2026-03-31 00:50:02] Round 1 dealt.
+[2026-03-31 00:50:02] === NEW GAME STARTED (limit: 50) ===
+[2026-03-31 00:50:02] Round 1 dealt.
+[2026-03-31 00:53:56] === NEW GAME STARTED (limit: 50) ===
+[2026-03-31 00:53:56] Round 1 dealt.
+[2026-03-31 00:53:56] === NEW GAME STARTED (limit: 50) ===
+[2026-03-31 00:53:56] Round 1 dealt.
+[2026-03-31 00:53:56] === NEW GAME STARTED (limit: 50) ===
+[2026-03-31 00:53:56] Round 1 dealt.
+[2026-03-31 00:53:57] === NEW GAME STARTED (limit: 50) ===
+[2026-03-31 00:53:57] Round 1 dealt.
+[2026-03-31 00:53:57] === NEW GAME STARTED (limit: 50) ===
+[2026-03-31 00:53:57] Round 1 dealt.
+[2026-03-31 00:53:57] === NEW GAME STARTED (limit: 50) ===
+[2026-03-31 00:53:57] Round 1 dealt.
+[2026-03-31 00:53:57] === NEW GAME STARTED (limit: 50) ===
+[2026-03-31 00:53:57] Round 1 dealt.
+[2026-03-31 00:53:57] === NEW GAME STARTED (limit: 50) ===
+[2026-03-31 00:53:57] Round 1 dealt.
+[2026-03-31 00:53:57] === NEW GAME STARTED (limit: 50) ===
+[2026-03-31 00:53:57] Round 1 dealt.
+[2026-03-31 00:53:57] === NEW GAME STARTED (limit: 50) ===
+[2026-03-31 00:53:57] Round 1 dealt.
+[2026-03-31 00:55:31] === NEW GAME STARTED (limit: 50) ===
+[2026-03-31 00:55:31] Round 1 dealt.
+[2026-03-31 00:55:32] === NEW GAME STARTED (limit: 50) ===
+[2026-03-31 00:55:32] Round 1 dealt.
+[2026-03-31 15:37:52] === NEW GAME STARTED (limit: 50) ===
+[2026-03-31 15:37:52] Round 1 dealt.
+[2026-03-31 15:37:59] === NEW GAME STARTED (limit: 50) ===
+[2026-03-31 15:37:59] Round 1 dealt.
+[2026-03-31 15:38:00] === NEW GAME STARTED (limit: 50) ===
+[2026-03-31 15:38:00] Round 1 dealt.
+[2026-03-31 15:38:00] === NEW GAME STARTED (limit: 50) ===
+[2026-03-31 15:38:00] Round 1 dealt.
+[2026-03-31 15:38:00] === NEW GAME STARTED (limit: 50) ===
+[2026-03-31 15:38:00] Round 1 dealt.
+[2026-03-31 15:38:00] === NEW GAME STARTED (limit: 50) ===
+[2026-03-31 15:38:00] Round 1 dealt.
+[2026-03-31 15:38:00] === NEW GAME STARTED (limit: 50) ===
+[2026-03-31 15:38:00] Round 1 dealt.
+[2026-03-31 15:38:01] === NEW GAME STARTED (limit: 50) ===
+[2026-03-31 15:38:01] Round 1 dealt.
+[2026-03-31 15:38:11] === NEW GAME STARTED (limit: 50) ===
+[2026-03-31 15:38:11] Round 1 dealt.
