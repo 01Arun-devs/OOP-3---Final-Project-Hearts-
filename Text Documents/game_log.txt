@@ -1,0 +1,511 @@
+[2026-03-16 22:49:28] === NEW GAME STARTED (limit: 50) ===
+[2026-03-16 22:49:28] Round 1 dealt.
+  You: 2♣ 3♣ 4♣ 7♣ 10♣ 2♦ 7♦ 9♦ A♦ 7♠ 8♠ 9♠ 10♥
+  AI 1: 8♣ K♣ 3♦ 5♦ 10♦ J♦ 2♠ 10♠ Q♠ A♠ 3♥ 7♥ 9♥
+  AI 2: 9♣ J♣ Q♣ 4♦ 8♦ Q♦ 4♠ 6♠ J♠ K♠ 4♥ J♥ K♥
+  AI 3: 5♣ 6♣ A♣ 6♦ K♦ 3♠ 5♠ 2♥ 5♥ 6♥ 8♥ Q♥ A♥
+[22:49:28] Round 1 started.
+[22:49:28] You leads with 2♣.
+[2026-03-16 22:49:34] === NEW GAME STARTED (limit: 50) ===
+[2026-03-16 22:49:34] Round 1 dealt.
+  You: 2♣ 5♣ 8♣ 10♣ A♣ 7♦ 9♦ J♦ 5♠ 7♠ 10♠ J♠ 2♥
+  AI 1: 4♣ 6♣ 9♣ K♣ 2♦ 4♦ A♠ 4♥ 7♥ 8♥ 10♥ K♥ A♥
+  AI 2: 3♣ J♣ 3♦ 5♦ 8♦ Q♦ A♦ 3♠ 4♠ 6♠ K♠ 9♥ Q♥
+  AI 3: 7♣ Q♣ 6♦ 10♦ K♦ 2♠ 8♠ 9♠ Q♠ 3♥ 5♥ 6♥ J♥
+[22:49:34] Round 1 started.
+[22:49:34] You leads with 2♣.
+[22:49:40] You played 2♣.
+[22:49:40] AI 1 played 4♣.
+[22:49:40] AI 2 played 3♣.
+[22:49:40] AI 3 played 7♣.
+[22:49:40] AI 3 wins the trick with 7♣.
+[22:49:40] AI 3 played 2♠.
+[22:52:10] You played 5♠.
+[22:52:10] AI 1 played A♠.
+[22:52:10] AI 2 played K♠.
+[22:52:10] AI 1 wins the trick with A♠.
+[22:52:10] AI 1 played 2♦.
+[22:52:10] AI 2 played 3♦.
+[22:52:10] AI 3 played 6♦.
+[22:52:18] You played J♦.
+[22:52:18] You wins the trick with J♦.
+[22:52:21] You played 7♦.
+[22:52:21] AI 1 played 4♦.
+[22:52:21] AI 2 played 5♦.
+[22:52:21] AI 3 played 10♦.
+[22:52:21] AI 3 wins the trick with 10♦.
+[22:52:21] AI 3 played 8♠.
+[22:52:25] You played J♠.
+[22:52:25] AI 1 played A♥.
+[22:52:25] AI 2 played 6♠.
+[22:52:25] You wins the trick with J♠.
+[22:52:29] You played 8♣.
+[22:52:29] AI 1 played 6♣.
+[22:52:29] AI 2 played J♣.
+[22:52:29] AI 3 played Q♣.
+[22:52:29] AI 3 wins the trick with Q♣.
+[22:52:29] AI 3 played 9♠.
+[22:52:30] You played 7♠.
+[22:52:30] AI 1 played K♥.
+[22:52:30] AI 2 played 4♠.
+[22:52:30] AI 3 wins the trick with 9♠.
+[22:52:30] AI 3 played K♦.
+[22:52:31] You played 9♦.
+[22:52:31] AI 1 played 10♥.
+[22:52:31] AI 2 played Q♦.
+[22:52:31] AI 3 wins the trick with K♦.
+[22:52:31] AI 3 played 3♥.
+[22:52:31] You played 2♥.
+[22:52:31] AI 1 played 4♥.
+[22:52:31] AI 2 played 9♥.
+[22:52:31] AI 2 wins the trick with 9♥.
+[22:52:31] AI 2 played 3♠.
+[22:52:31] AI 3 played Q♠.
+[22:52:31] You played 10♠.
+[22:52:31] AI 1 played 8♥.
+[22:52:31] AI 3 wins the trick with Q♠.
+[22:52:31] AI 3 played 5♥.
+[22:52:31] You played 5♣.
+[22:52:31] AI 1 played 7♥.
+[22:52:31] AI 2 played Q♥.
+[22:52:31] AI 2 wins the trick with Q♥.
+[22:52:31] AI 2 played 8♦.
+[22:52:31] AI 3 played J♥.
+[22:52:32] You played 10♣.
+[22:52:32] AI 1 played K♣.
+[22:52:32] AI 2 wins the trick with 8♦.
+[22:52:32] AI 2 played A♦.
+[22:52:32] AI 3 played 6♥.
+[22:52:32] You played A♣.
+[22:52:32] AI 1 played 9♣.
+[22:52:32] AI 2 wins the trick with A♦.
+[22:52:32] Round 1 finished!
+[22:52:32] You round: +1  total: 1
+[22:52:32] AI 1 round: +0  total: 0
+[22:52:32] AI 2 round: +9  total: 9
+[22:52:32] AI 3 round: +8  total: 8
+[22:52:32] Click 'Next Round' to continue.
+[2026-03-16 22:52:35] Round 2 dealt.
+  You: 2♣ 8♣ Q♣ A♣ 5♦ 3♠ 9♠ J♠ Q♠ 4♥ 6♥ 8♥ K♥
+  AI 1: 7♣ 7♦ 8♦ Q♦ K♦ A♦ 2♠ 4♠ 6♠ 7♠ 2♥ 10♥ A♥
+  AI 2: 3♣ 9♣ 3♦ 4♦ 6♦ J♦ 8♠ K♠ A♠ 3♥ 5♥ 7♥ Q♥
+  AI 3: 4♣ 5♣ 6♣ 10♣ J♣ K♣ 2♦ 9♦ 10♦ 5♠ 10♠ 9♥ J♥
+[22:52:35] Round 2 started.
+[22:52:35] You leads with 2♣.
+[22:52:36] You played 2♣.
+[22:52:36] AI 1 played 7♣.
+[22:52:36] AI 2 played 3♣.
+[22:52:36] AI 3 played 6♣.
+[22:52:36] AI 1 wins the trick with 7♣.
+[22:52:36] AI 1 played 2♠.
+[22:52:36] AI 2 played 8♠.
+[22:52:36] AI 3 played 5♠.
+[22:52:37] You played 3♠.
+[22:52:37] AI 2 wins the trick with 8♠.
+[22:52:37] AI 2 played 3♦.
+[22:52:37] AI 3 played 2♦.
+[22:52:38] You played 5♦.
+[22:52:38] AI 1 played 7♦.
+[22:52:38] AI 1 wins the trick with 7♦.
+[22:52:38] AI 1 played 4♠.
+[22:52:38] AI 2 played K♠.
+[22:52:38] AI 3 played 10♠.
+[22:52:39] You played 9♠.
+[22:52:39] AI 2 wins the trick with K♠.
+[22:52:39] AI 2 played 4♦.
+[22:52:39] AI 3 played 9♦.
+[22:52:40] You played 8♣.
+[22:52:40] AI 1 played 8♦.
+[22:52:40] AI 3 wins the trick with 9♦.
+[22:52:40] AI 3 played 4♣.
+[22:52:40] You played Q♣.
+[22:52:40] AI 1 played A♥.
+[22:52:40] AI 2 played 9♣.
+[22:52:40] You wins the trick with Q♣.
+[22:52:41] You played A♣.
+[22:52:41] AI 1 played 10♥.
+[22:52:41] AI 2 played Q♥.
+[22:52:41] AI 3 played K♣.
+[22:52:41] You wins the trick with A♣.
+[22:52:41] You played J♠.
+[22:52:41] AI 1 played 7♠.
+[22:52:41] AI 2 played A♠.
+[22:52:41] AI 3 played J♥.
+[22:52:41] AI 2 wins the trick with A♠.
+[22:52:41] AI 2 played 6♦.
+[22:52:41] AI 3 played 10♦.
+[22:52:41] You played Q♠.
+[22:52:41] AI 1 played Q♦.
+[22:52:41] AI 1 wins the trick with Q♦.
+[22:52:41] AI 1 played 6♠.
+[22:52:41] AI 2 played 7♥.
+[22:52:41] AI 3 played 9♥.
+[22:52:41] You played 4♥.
+[22:52:41] AI 1 wins the trick with 6♠.
+[22:52:41] AI 1 played K♦.
+[22:52:41] AI 2 played J♦.
+[22:52:41] AI 3 played J♣.
+[22:52:41] You played 6♥.
+[22:52:41] AI 1 wins the trick with K♦.
+[22:52:41] AI 1 played A♦.
+[22:52:41] AI 2 played 5♥.
+[22:52:41] AI 3 played 10♣.
+[22:52:41] You played 8♥.
+[22:52:41] AI 1 wins the trick with A♦.
+[22:52:41] AI 1 played 2♥.
+[22:52:41] AI 2 played 3♥.
+[22:52:41] AI 3 played 5♣.
+[22:52:42] You played K♥.
+[22:52:42] You wins the trick with K♥.
+[22:52:42] Round 2 finished!
+[22:52:42] You round: +6  total: 7
+[22:52:42] AI 1 round: +11  total: 11
+[22:52:42] AI 2 round: +1  total: 10
+[22:52:42] AI 3 round: +0  total: 8
+[22:52:42] Click 'Next Round' to continue.
+[2026-03-16 22:52:44] Round 3 dealt.
+  You: 4♣ 10♣ J♣ K♣ 3♠ 5♠ 6♠ 7♠ A♠ 3♥ 4♥ 6♥ K♥
+  AI 1: 2♣ 5♣ 3♦ 6♦ 7♦ 9♦ Q♦ K♦ 2♠ J♠ 9♥ 10♥ A♥
+  AI 2: 8♣ 9♣ Q♣ 2♦ 5♦ J♦ A♦ 10♠ 2♥ 5♥ 7♥ 8♥ J♥
+  AI 3: 3♣ 6♣ 7♣ A♣ 4♦ 8♦ 10♦ 4♠ 8♠ 9♠ Q♠ K♠ Q♥
+[22:52:44] Round 3 started.
+[22:52:44] AI 1 leads with 2♣.
+[22:52:44] AI 1 played 2♣.
+[22:52:44] AI 2 played 8♣.
+[22:52:44] AI 3 played 7♣.
+[22:56:20] You played 4♣.
+[22:56:20] AI 2 wins the trick with 8♣.
+[22:56:20] AI 2 played 2♦.
+[22:56:20] AI 3 played 4♦.
+[22:56:20] You played 10♣.
+[22:56:20] AI 1 played 3♦.
+[22:56:20] AI 3 wins the trick with 4♦.
+[22:56:20] AI 3 played 3♣.
+[22:56:21] You played J♣.
+[22:56:21] AI 1 played 5♣.
+[22:56:21] AI 2 played 9♣.
+[22:56:21] You wins the trick with J♣.
+[22:56:21] You played K♣.
+[22:56:21] AI 1 played A♥.
+[22:56:21] AI 2 played Q♣.
+[22:56:21] AI 3 played 6♣.
+[22:56:21] You wins the trick with K♣.
+[22:56:21] You played 3♠.
+[22:56:21] AI 1 played 2♠.
+[22:56:21] AI 2 played 10♠.
+[22:56:21] AI 3 played 9♠.
+[22:56:21] AI 2 wins the trick with 10♠.
+[22:56:21] AI 2 played 5♦.
+[22:56:21] AI 3 played 8♦.
+[22:56:22] You played 5♠.
+[22:56:22] AI 1 played 7♦.
+[22:56:22] AI 3 wins the trick with 8♦.
+[22:56:22] AI 3 played 4♠.
+[22:56:22] You played 6♠.
+[22:56:22] AI 1 played J♠.
+[22:56:22] AI 2 played J♥.
+[22:56:22] AI 1 wins the trick with J♠.
+[22:56:22] AI 1 played 6♦.
+[22:56:22] AI 2 played J♦.
+[22:56:22] AI 3 played 10♦.
+[22:56:22] You played 7♠.
+[22:56:22] AI 2 wins the trick with J♦.
+[22:56:22] AI 2 played A♦.
+[22:56:22] AI 3 played Q♠.
+[22:56:23] You played A♠.
+[22:56:23] AI 1 played K♦.
+[22:56:23] AI 2 wins the trick with A♦.
+[22:56:23] AI 2 played 2♥.
+[22:56:23] AI 3 played Q♥.
+[22:56:23] You played 3♥.
+[22:56:23] AI 1 played 10♥.
+[22:56:23] AI 3 wins the trick with Q♥.
+[22:56:23] AI 3 played 8♠.
+[22:56:23] You played 4♥.
+[22:56:23] AI 1 played 9♥.
+[22:56:23] AI 2 played 8♥.
+[22:56:23] AI 3 wins the trick with 8♠.
+[22:56:23] AI 3 played K♠.
+[22:56:24] You played 6♥.
+[22:56:24] AI 1 played Q♦.
+[22:56:24] AI 2 played 7♥.
+[22:56:24] AI 3 wins the trick with K♠.
+[22:56:24] AI 3 played A♣.
+[22:56:24] You played K♥.
+[22:56:24] AI 1 played 9♦.
+[22:56:24] AI 2 played 5♥.
+[22:56:24] AI 3 wins the trick with A♣.
+[22:56:24] Round 3 finished!
+[22:56:24] You round: +1  total: 8
+[22:56:24] AI 1 round: +1  total: 12
+[22:56:24] AI 2 round: +5  total: 15
+[22:56:24] AI 3 round: +11  total: 19
+[22:56:24] Click 'Next Round' to continue.
+[2026-03-17 14:07:52] === NEW GAME STARTED (limit: 50) ===
+[2026-03-17 14:07:52] Round 1 dealt.
+  You: 10♣ K♣ 7♦ J♦ 7♠ J♠ Q♠ 3♥ 4♥ 6♥ 7♥ 9♥ 10♥
+  AI 1: 5♣ 6♣ J♣ Q♣ 6♦ 9♦ Q♦ A♦ 8♠ K♠ 2♥ 8♥ Q♥
+  AI 2: 8♣ 9♣ 4♦ 5♦ 10♦ 2♠ 4♠ 6♠ 9♠ 10♠ J♥ K♥ A♥
+  AI 3: 2♣ 3♣ 4♣ 7♣ A♣ 2♦ 3♦ 8♦ K♦ 3♠ 5♠ A♠ 5♥
+[14:07:52] Round 1 started.
+[14:07:52] AI 3 leads with 2♣.
+[14:07:52] AI 3 played 2♣.
+[2026-03-17 15:12:24] === NEW GAME STARTED (limit: 50) ===
+[2026-03-17 15:12:24] Round 1 dealt.
+  You: 4♣ 6♣ 8♣ 9♣ J♣ A♣ 2♦ J♦ 6♠ Q♠ 7♥ 8♥ 9♥
+  AI 1: 5♣ K♣ 7♦ 8♦ 9♦ 10♦ K♦ 3♠ 5♠ 7♠ 4♥ 5♥ Q♥
+  AI 2: 2♣ 3♣ 10♣ Q♣ 4♦ 6♦ Q♦ A♦ K♠ 10♥ J♥ K♥ A♥
+  AI 3: 7♣ 3♦ 5♦ 2♠ 4♠ 8♠ 9♠ 10♠ J♠ A♠ 2♥ 3♥ 6♥
+[15:12:24] Round 1 started.
+[15:12:24] AI 2 leads with 2♣.
+[15:12:24] AI 2 played 2♣.
+[15:12:24] AI 3 played 7♣.
+[2026-03-17 15:12:30] === NEW GAME STARTED (limit: 50) ===
+[2026-03-17 15:12:30] Round 1 dealt.
+  You: 4♣ J♣ 6♦ 7♦ 8♦ 2♠ 6♠ 7♠ 10♠ 4♥ 6♥ 8♥ 9♥
+  AI 1: 2♣ 6♣ 7♣ 9♣ K♣ 3♦ 9♦ 10♦ K♦ Q♠ 5♥ 7♥ A♥
+  AI 2: 3♣ 10♣ Q♣ 2♦ 4♦ 5♦ J♦ A♦ 8♠ 9♠ A♠ J♥ K♥
+  AI 3: 5♣ 8♣ A♣ Q♦ 3♠ 4♠ 5♠ J♠ K♠ 2♥ 3♥ 10♥ Q♥
+[15:12:30] Round 1 started.
+[15:12:30] AI 1 leads with 2♣.
+[15:12:30] AI 1 played 2♣.
+[15:12:30] AI 2 played 3♣.
+[15:12:30] AI 3 played 5♣.
+[15:13:11] You played 4♣.
+[15:13:11] AI 3 wins the trick with 5♣.
+[15:13:11] AI 3 played 3♠.
+[15:14:02] You played 10♠.
+[15:14:02] AI 1 played Q♠.
+[15:14:02] AI 2 played 9♠.
+[15:14:02] AI 1 wins the trick with Q♠.
+[15:14:02] AI 1 played 3♦.
+[15:14:02] AI 2 played 2♦.
+[15:14:02] AI 3 played Q♦.
+[15:14:23] You played 8♦.
+[15:14:23] AI 3 wins the trick with Q♦.
+[15:14:23] AI 3 played 4♠.
+[15:14:48] You played 7♠.
+[15:14:48] AI 1 played A♥.
+[15:14:48] AI 2 played 8♠.
+[15:14:48] AI 2 wins the trick with 8♠.
+[15:14:48] AI 2 played 4♦.
+[15:14:48] AI 3 played Q♥.
+[15:15:03] You played 7♦.
+[15:15:03] AI 1 played 9♦.
+[15:15:03] AI 1 wins the trick with 9♦.
+[15:15:03] AI 1 played 6♣.
+[15:15:03] AI 2 played 10♣.
+[15:15:03] AI 3 played 8♣.
+[15:15:08] You played J♣.
+[15:15:08] You wins the trick with J♣.
+[15:15:08] You played 6♦.
+[15:15:08] AI 1 played 10♦.
+[15:15:08] AI 2 played 5♦.
+[15:15:08] AI 3 played 10♥.
+[15:15:08] AI 1 wins the trick with 10♦.
+[15:15:08] AI 1 played 7♣.
+[15:15:08] AI 2 played Q♣.
+[15:15:08] AI 3 played A♣.
+[15:15:09] You played 2♠.
+[15:15:09] AI 3 wins the trick with A♣.
+[15:15:09] AI 3 played 5♠.
+[15:15:09] You played 6♠.
+[15:15:09] AI 1 played 7♥.
+[15:15:09] AI 2 played A♠.
+[15:15:09] AI 2 wins the trick with A♠.
+[15:15:09] AI 2 played J♦.
+[15:15:09] AI 3 played 3♥.
+[15:15:09] You played 4♥.
+[15:15:09] AI 1 played K♦.
+[15:15:09] AI 1 wins the trick with K♦.
+[15:15:09] AI 1 played 9♣.
+[15:15:09] AI 2 played K♥.
+[15:15:09] AI 3 played 2♥.
+[15:15:10] You played 6♥.
+[15:15:10] AI 1 wins the trick with 9♣.
+[15:15:10] AI 1 played K♣.
+[15:15:10] AI 2 played J♥.
+[15:15:10] AI 3 played K♠.
+[15:15:10] You played 8♥.
+[15:15:10] AI 1 wins the trick with K♣.
+[15:15:10] AI 1 played 5♥.
+[15:15:10] AI 2 played A♦.
+[15:15:10] AI 3 played J♠.
+[15:15:10] You played 9♥.
+[15:15:10] You wins the trick with 9♥.
+[15:15:10] Round 1 finished!
+[15:15:10] You round: +2  total: 2
+[15:15:10] AI 1 round: +14  total: 14
+[15:15:10] AI 2 round: +2  total: 2
+[15:15:10] AI 3 round: +0  total: 0
+[15:15:10] Click 'Next Round' to continue.
+[2026-03-18 16:03:20] === NEW GAME STARTED (limit: 50) ===
+[2026-03-18 16:03:20] Round 1 dealt.
+  You: 6♣ 10♣ A♣ 2♦ 4♦ 5♦ Q♦ K♦ 8♠ K♠ 5♥ 8♥ 10♥
+  AI 1: 3♣ 7♣ 8♣ Q♣ 9♦ 10♦ J♦ 3♠ 5♠ 9♠ 10♠ J♠ J♥
+  AI 2: 5♣ 9♣ K♣ 6♦ 8♦ A♦ 4♠ 7♠ A♠ 3♥ 4♥ 9♥ Q♥
+  AI 3: 2♣ 4♣ J♣ 3♦ 7♦ 2♠ 6♠ Q♠ 2♥ 6♥ 7♥ K♥ A♥
+[16:03:20] Round 1 started.
+[16:03:20] AI 3 leads with 2♣.
+[16:03:20] AI 3 played 2♣.
+[16:03:26] You played 6♣.
+[16:03:26] AI 1 played 3♣.
+[16:03:26] AI 2 played 5♣.
+[16:03:26] You wins the trick with 6♣.
+[16:03:27] You played 10♣.
+[16:03:27] AI 1 played 8♣.
+[16:03:27] AI 2 played 9♣.
+[16:03:27] AI 3 played 4♣.
+[16:03:27] You wins the trick with 10♣.
+[16:03:28] You played A♣.
+[16:03:28] AI 1 played Q♣.
+[16:03:28] AI 2 played K♣.
+[16:03:28] AI 3 played J♣.
+[16:03:28] You wins the trick with A♣.
+[16:03:29] You played 2♦.
+[16:03:29] AI 1 played 9♦.
+[16:03:29] AI 2 played 8♦.
+[16:03:29] AI 3 played 7♦.
+[16:03:29] AI 1 wins the trick with 9♦.
+[16:03:29] AI 1 played 3♠.
+[16:03:29] AI 2 played 4♠.
+[16:03:29] AI 3 played 2♠.
+[16:03:30] You played 8♠.
+[16:03:30] You wins the trick with 8♠.
+[16:03:30] You played 4♦.
+[16:03:30] AI 1 played 10♦.
+[16:03:30] AI 2 played 6♦.
+[16:03:30] AI 3 played 3♦.
+[16:03:30] AI 1 wins the trick with 10♦.
+[16:03:30] AI 1 played 5♠.
+[16:03:30] AI 2 played 7♠.
+[16:03:30] AI 3 played 6♠.
+[16:03:31] You played K♠.
+[16:03:31] You wins the trick with K♠.
+[16:03:31] You played 5♦.
+[16:03:31] AI 1 played J♦.
+[16:03:31] AI 2 played A♦.
+[16:03:31] AI 3 played Q♠.
+[16:03:31] AI 2 wins the trick with A♦.
+[16:03:31] AI 2 played A♠.
+[16:03:31] AI 3 played A♥.
+[16:03:31] You played Q♦.
+[16:03:31] AI 1 played J♠.
+[16:03:31] AI 2 wins the trick with A♠.
+[16:03:31] AI 2 played 3♥.
+[16:03:31] AI 3 played 2♥.
+[16:03:31] You played 5♥.
+[16:03:31] AI 1 played J♥.
+[16:03:31] AI 1 wins the trick with J♥.
+[16:03:31] AI 1 played 7♣.
+[16:03:31] AI 2 played Q♥.
+[16:03:31] AI 3 played K♥.
+[16:03:31] You played K♦.
+[16:03:31] AI 1 wins the trick with 7♣.
+[16:03:31] AI 1 played 9♠.
+[16:03:31] AI 2 played 9♥.
+[16:03:31] AI 3 played 7♥.
+[16:03:31] You played 8♥.
+[16:03:31] AI 1 wins the trick with 9♠.
+[16:03:31] AI 1 played 10♠.
+[16:03:31] AI 2 played 4♥.
+[16:03:31] AI 3 played 6♥.
+[16:03:31] You played 10♥.
+[16:03:31] AI 1 wins the trick with 10♠.
+[16:03:31] Round 1 finished!
+[16:03:31] You round: +0  total: 0
+[16:03:31] AI 1 round: +12  total: 12
+[16:03:31] AI 2 round: +6  total: 6
+[16:03:31] AI 3 round: +0  total: 0
+[16:03:31] Click 'Next Round' to continue.
+[2026-03-18 16:03:48] Round 2 dealt.
+  You: 7♣ Q♣ A♣ 6♦ 7♦ 2♠ 3♠ 6♠ 8♠ 4♥ 7♥ 9♥ A♥
+  AI 1: 2♣ 3♣ K♣ 3♦ J♦ A♦ 7♠ Q♠ 3♥ 5♥ 6♥ 10♥ J♥
+  AI 2: 5♣ 9♣ 10♣ 2♦ 5♦ 8♦ 9♦ K♦ 5♠ 10♠ K♠ 8♥ K♥
+  AI 3: 4♣ 6♣ 8♣ J♣ 4♦ 10♦ Q♦ 4♠ 9♠ J♠ A♠ 2♥ Q♥
+[16:03:48] Round 2 started.
+[16:03:48] AI 1 leads with 2♣.
+[16:03:48] AI 1 played 2♣.
+[16:03:48] AI 2 played 5♣.
+[16:03:48] AI 3 played 4♣.
+[16:03:54] You played 7♣.
+[16:03:54] You wins the trick with 7♣.
+[2026-03-24 16:23:45] === NEW GAME STARTED (limit: 50) ===
+[2026-03-24 16:23:45] Round 1 dealt.
+  You: 4♣ 7♣ K♣ 8♦ 3♠ 5♠ 10♠ J♠ K♠ 3♥ 7♥ 8♥ Q♥
+  AI 1: 2♣ 9♣ A♣ 2♦ K♦ A♦ 7♠ Q♠ 4♥ 9♥ J♥ K♥ A♥
+  AI 2: 3♣ 6♣ 8♣ 3♦ 4♦ 5♦ 2♠ 6♠ 8♠ 9♠ A♠ 2♥ 10♥
+  AI 3: 5♣ 10♣ J♣ Q♣ 6♦ 7♦ 9♦ 10♦ J♦ Q♦ 4♠ 5♥ 6♥
+[16:23:45] Round 1 started.
+[16:23:45] AI 1 leads with 2♣.
+[16:23:45] AI 1 played 2♣.
+[16:23:45] AI 2 played 3♣.
+[16:23:45] AI 3 played 5♣.
+[16:23:50] You played 7♣.
+[16:23:50] You wins the trick with 7♣.
+[16:23:51] You played 4♣.
+[16:23:51] AI 1 played 9♣.
+[16:23:51] AI 2 played 8♣.
+[16:23:51] AI 3 played 10♣.
+[16:23:51] AI 3 wins the trick with 10♣.
+[16:23:51] AI 3 played 4♠.
+[16:23:53] You played 3♠.
+[16:23:53] AI 1 played 7♠.
+[16:23:53] AI 2 played 6♠.
+[16:23:53] AI 1 wins the trick with 7♠.
+[16:23:53] AI 1 played 2♦.
+[16:23:53] AI 2 played 3♦.
+[16:23:53] AI 3 played 6♦.
+[16:23:54] You played 8♦.
+[16:23:54] You wins the trick with 8♦.
+[16:23:54] You played K♣.
+[16:23:54] AI 1 played A♣.
+[16:23:54] AI 2 played 6♣.
+[16:23:54] AI 3 played Q♣.
+[16:23:54] AI 1 wins the trick with A♣.
+[16:23:54] AI 1 played K♦.
+[16:23:54] AI 2 played 5♦.
+[16:23:54] AI 3 played Q♦.
+[16:23:54] You played 5♠.
+[16:23:54] AI 1 wins the trick with K♦.
+[16:23:54] AI 1 played A♦.
+[16:23:54] AI 2 played 4♦.
+[16:23:54] AI 3 played J♦.
+[16:23:55] You played 10♠.
+[16:23:55] AI 1 wins the trick with A♦.
+[16:23:55] AI 1 played Q♠.
+[16:23:55] AI 2 played 9♠.
+[16:23:55] AI 3 played 6♥.
+[16:23:55] You played J♠.
+[16:23:55] AI 1 wins the trick with Q♠.
+[16:23:55] AI 1 played 4♥.
+[16:23:55] AI 2 played 2♥.
+[16:23:55] AI 3 played 5♥.
+[16:23:55] You played 3♥.
+[16:23:55] AI 3 wins the trick with 5♥.
+[16:23:55] AI 3 played 7♦.
+[16:23:55] You played K♠.
+[16:23:55] AI 1 played A♥.
+[16:23:55] AI 2 played 10♥.
+[16:23:55] AI 3 wins the trick with 7♦.
+[16:23:55] AI 3 played 9♦.
+[16:23:55] You played 7♥.
+[16:23:56] AI 1 played K♥.
+[16:23:56] AI 2 played A♠.
+[16:23:56] AI 3 wins the trick with 9♦.
+[16:23:56] AI 3 played 10♦.
+[16:23:56] You played 8♥.
+[16:23:56] AI 1 played J♥.
+[16:23:56] AI 2 played 8♠.
+[16:23:56] AI 3 wins the trick with 10♦.
+[16:23:56] AI 3 played J♣.
+[16:23:56] You played Q♥.
+[16:23:56] AI 1 played 9♥.
+[16:23:56] AI 2 played 2♠.
+[16:23:56] AI 3 wins the trick with J♣.
+[16:23:56] Round 1 finished!
+[16:23:56] You round: +0  total: 0
+[16:23:56] AI 1 round: +6  total: 6
+[16:23:56] AI 2 round: +0  total: 0
+[16:23:56] AI 3 round: +12  total: 12
+[16:23:56] Click 'Next Round' to continue.
