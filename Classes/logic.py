@@ -1,363 +1,274 @@
 # =============================================================================
 # FILE:    logic.py
-# PURPOSE: All Hearts game rules and logic. No GUI code here.
-#          The GUI talks to this class to play the game.
-# AUTHOR:  Group 2 - COSC-2200-03
-# =============================================================================
-# OOP CONCEPT - ENCAPSULATION + COMPOSITION:
-#   HeartsGame owns the players, deck, and score manager.
-#   All rules are in this one class - GUI never calculates scores.
+# PURPOSE: All Hearts game rules, flow control, and scoring.
+#          _play_ai_turns() removed — GUI now drives each AI step one at a time
+#          via step_ai_one() so animations can run between each play.
+# COURSE:  COSC-2200-03 | Durham College | Group 2
+# AUTHORS: ARUN  — Game controller, round flow, dealer rotation, stats/logging
+#          RUDRA — Rule enforcement, trick resolution, scoring, Shoot the Moon
 # =============================================================================
 
-import json
-import os
-import datetime
+import json, os, datetime
 from card   import Card
 from deck   import Deck
 from player import HumanPlayer, AIPlayer, SmartAIPlayer
 
-TARGET_SCORE = 50   # default - can be changed to 100
-
 
 class HeartsGame:
-    """
-    Main game controller. Manages all Hearts rules, scoring, and game flow.
-    The GUI reads from this class and calls play_card() / next_round().
-    """
-
     LOG_FILE   = "game_log.txt"
     STATS_FILE = "scores.json"
 
-    def __init__(self, score_limit=50):
-        # Create players - 1 Human + 2 AI + 1 Smart AI
+    def __init__(self, player_name="You", score_limit=50):
+        self.player_name = player_name
+        self.score_limit = score_limit
         self.players = [
-            HumanPlayer("You"),
+            HumanPlayer(player_name),
             AIPlayer("AI 1"),
-            SmartAIPlayer("AI 2"),   # Smart AI - tries Shoot the Moon
+            SmartAIPlayer("AI 2"),
             AIPlayer("AI 3"),
         ]
-
-        self.score_limit   = score_limit
-        self.total_scores  = {p.name: 0 for p in self.players}
-        self.round_number  = 0
-        self.message_log   = []
-        self.round_over    = False
-        self.game_over     = False
-        self.winner_text   = ""
-        self.shoot_moon_player = None   # name of player who shot the moon
-
+        self.total_scores      = {p.name: 0 for p in self.players}
+        self.round_number      = 0
+        self.message_log       = []
+        self.round_over        = False
+        self.game_over         = False
+        self.winner_text       = ""
+        self.shoot_moon_player = None
+        self.dealer_index      = 0
+        # trick_winner: set by _resolve_trick, read by GUI for win animation
+        self.trick_winner_index = None
+        self.last_trick_cards   = []   # snapshot of the 4 cards before clearing
         self._log_game_start()
         self.start_new_round()
 
-    # =========================================================================
-    # ROUND SETUP
-    # =========================================================================
-
+    # ── Round setup ───────────────────────────────────────────────────────────
     def start_new_round(self):
-        """Shuffle, deal, and start a new round of 13 tricks."""
-        self.round_number      += 1
+        self.round_number += 1
+        if self.round_number > 1:
+            self.dealer_index = (self.dealer_index + 1) % 4
         self.hearts_broken      = False
         self.first_trick        = True
         self.trick_number       = 1
         self.lead_suit          = None
-        self.trick_cards        = []   # list of (player_index, card)
+        self.trick_cards        = []
         self.round_over         = False
         self.shoot_moon_player  = None
+        self.trick_winner_index = None
+        self.last_trick_cards   = []
 
-        # Deal cards
-        deck = Deck()
-        deck.shuffle()
-        hands = deck.deal(4)
-        for i, player in enumerate(self.players):
-            player.receive_cards(hands[i])
-            player.sort_hand()
+        deck = Deck(); deck.shuffle(); hands = deck.deal(4)
+        for i, p in enumerate(self.players):
+            p.receive_cards(hands[i]); p.sort_hand()
 
-        # Find who has 2 of Clubs - they lead first
         two_clubs = Card("C", 2)
         self.current_index = 0
-        for i, player in enumerate(self.players):
-            if two_clubs in player.hand:
-                self.current_index = i
-                break
+        for i, p in enumerate(self.players):
+            if two_clubs in p.hand:
+                self.current_index = i; break
 
         self.message_log = []
         self._log_hand_dealt()
-        self.log("Round " + str(self.round_number) + " started.")
+        self.log("Round " + str(self.round_number) +
+                 " — Dealer: " + self.players[self.dealer_index].name)
         self.log(self.players[self.current_index].name + " leads with 2♣.")
 
-        # Let AI play until it is human's turn
-        if not self.players[self.current_index].is_human:
-            self._play_ai_turns()
-
-    # =========================================================================
-    # CARD VALIDATION
-    # =========================================================================
-
+    # ── Validation ───────────────────────────────────────────────────────────
     def get_valid_for_player(self, player_index):
-        """Get valid cards for any player."""
-        player = self.players[player_index]
+        player    = self.players[player_index]
         lead_suit = self.trick_cards[0][1].suit if self.trick_cards else None
         return player.get_valid_cards(lead_suit, self.hearts_broken, self.first_trick)
 
     def is_valid(self, player_index, card):
-        """Check if a card is a valid play."""
         return card in self.get_valid_for_player(player_index)
 
-    # =========================================================================
-    # PLAYING CARDS
-    # =========================================================================
-
+    # ── Play one card (called by GUI for BOTH human and AI) ───────────────────
     def play_card(self, player_index, card):
         """
-        Play a card for a player.
-        Returns (True, message) if valid, (False, error) if not.
+        Play one card. Returns (True, 'OK') or (False, error).
+        Does NOT resolve trick or advance turn — GUI calls resolve_trick_if_done()
+        after animating the card landing.
         """
-        player = self.players[player_index]
-
         if not self.is_valid(player_index, card):
-            return False, "That card is not valid to play right now."
-
-        # Remove from hand and add to trick
+            return False, "That card is not valid."
+        player = self.players[player_index]
         player.remove_card(card)
         self.trick_cards.append((player_index, card))
-
-        # Set lead suit if this is first card
         if self.lead_suit is None:
             self.lead_suit = card.suit
-
-        # Track hearts broken
         if card.suit == "H":
             self.hearts_broken = True
-
         self.log(player.name + " played " + card.label() + ".")
-
-        # If trick is complete (4 cards played)
-        if len(self.trick_cards) == 4:
-            self._resolve_trick()
-        else:
-            # Move to next player
-            self.current_index = (player_index + 1) % 4
-
         return True, "OK"
 
+    def resolve_trick_if_done(self):
+        """
+        Call after each play_card(). Returns:
+          'continue'   — trick still in progress, advance to next player
+          'trick_done' — trick resolved, trick_winner_index set, next player set
+          'round_done' — all 13 tricks played, round scored
+        """
+        if len(self.trick_cards) < 4:
+            self.current_index = (self.trick_cards[-1][0] + 1) % 4
+            return "continue"
+        return self._resolve_trick()
+
     def _resolve_trick(self):
-        """Find trick winner, award cards, check if round is over."""
-        # Winner = highest card of lead suit
         lead_plays = [(i, c) for i, c in self.trick_cards if c.suit == self.lead_suit]
         winner_index, winning_card = max(lead_plays, key=lambda x: x[1].rank)
 
-        # Give all trick cards to winner
+        # Snapshot before clearing (GUI needs it for win animation)
+        self.last_trick_cards   = list(self.trick_cards)
+        self.trick_winner_index = winner_index
+
         for _, card in self.trick_cards:
             self.players[winner_index].taken.append(card)
 
         winner_name = self.players[winner_index].name
         self.log(winner_name + " wins the trick with " + winning_card.label() + ".")
 
-        # Reset for next trick
         self.trick_cards   = []
         self.lead_suit     = None
         self.current_index = winner_index
         self.first_trick   = False
         self.trick_number += 1
 
-        # Check if all 13 tricks are done
         if all(len(p.hand) == 0 for p in self.players):
             self._finish_round()
-        elif not self.players[self.current_index].is_human:
-            self._play_ai_turns()
+            return "round_done"
+        return "trick_done"
 
-    def _play_ai_turns(self):
-        """Keep playing AI turns until it is the human's turn or round ends."""
-        while not self.round_over and not self.game_over:
-            player = self.players[self.current_index]
-            if player.is_human:
-                break
+    # ── AI pick (called by GUI one step at a time) ────────────────────────────
+    def ai_choose_card(self):
+        """Ask the current AI player to pick a card. Returns the Card."""
+        player      = self.players[self.current_index]
+        lead_suit   = self.trick_cards[0][1].suit if self.trick_cards else None
+        trick_cards = [c for _, c in self.trick_cards]
+        return player.choose_card(lead_suit, self.hearts_broken,
+                                  self.first_trick, trick_cards)
 
-            # Get lead suit for this trick
-            lead_suit   = self.trick_cards[0][1].suit if self.trick_cards else None
-            trick_cards = [c for _, c in self.trick_cards]
-
-            card = player.choose_card(lead_suit, self.hearts_broken,
-                                      self.first_trick, trick_cards)
-            self.play_card(self.current_index, card)
-
-    # =========================================================================
-    # HUMAN PLAYS
-    # =========================================================================
-
+    # ── Human play entry point ────────────────────────────────────────────────
     def human_play_by_label(self, label):
-        """Called by GUI when human clicks a card button."""
-        # Find the card matching this label
-        selected = None
-        for card in self.players[0].hand:
-            if card.label() == label:
-                selected = card
-                break
-
+        if self.current_turn_name() != self.player_name:
+            return False, "Not your turn."
+        if self.round_over or self.game_over:
+            return False, "Round or game is over."
+        selected = next((c for c in self.players[0].hand if c.label() == label), None)
         if selected is None:
             return False, "Card not found."
+        return self.play_card(0, selected)
 
-        ok, msg = self.play_card(0, selected)
-        if ok:
-            self._play_ai_turns()
-        return ok, msg
-
-    # =========================================================================
-    # SCORING
-    # =========================================================================
-
+    # ── Scoring ───────────────────────────────────────────────────────────────
     def round_scores(self):
-        """Count penalty cards each player collected this round."""
-        scores = {}
-        for player in self.players:
-            total = 0
-            for card in player.taken:
-                total += card.get_value()
-            scores[player.name] = total
-        return scores
+        return {p.name: sum(c.get_value() for c in p.taken) for p in self.players}
 
     def _finish_round(self):
-        """Score the round, check for Shoot the Moon, check game over."""
         self.round_over = True
         rs = self.round_scores()
-
         self.log("Round " + str(self.round_number) + " finished!")
-
-        # Check Shoot the Moon - one player got all 18 points
-        shooter = None
-        for name, pts in rs.items():
-            if pts == 18:
-                shooter = name
-                break
-
+        shooter = next((n for n, pts in rs.items() if pts == 18), None)
         if shooter:
-            # Reverse scores - shooter gets 0, everyone else gets 18
             self.shoot_moon_player = shooter
-            self.log("SHOOT THE MOON by " + shooter + "! Everyone else +18!")
-            for player in self.players:
-                if player.name == shooter:
-                    rs[player.name] = 0
-                else:
-                    rs[player.name] = 18
-
-        # Add to total scores
-        for player in self.players:
-            self.total_scores[player.name] += rs[player.name]
-            self.log(player.name + " round: +" + str(rs[player.name]) +
-                     "  total: " + str(self.total_scores[player.name]))
-
-        # Check game over
+            self.log("★ SHOOT THE MOON by " + shooter + "! Everyone else +18!")
+            for p in self.players:
+                rs[p.name] = 0 if p.name == shooter else 18
+        for p in self.players:
+            self.total_scores[p.name] += rs[p.name]
+            self.log(p.name + "  +" + str(rs[p.name]) +
+                     "  →  total: " + str(self.total_scores[p.name]))
         if max(self.total_scores.values()) >= self.score_limit:
-            self.game_over  = True
-            low = min(self.total_scores.values())
-            winners = [n for n, s in self.total_scores.items() if s == low]
+            self.game_over   = True
+            low              = min(self.total_scores.values())
+            winners          = [n for n, s in self.total_scores.items() if s == low]
             self.winner_text = ", ".join(winners)
-            self.log("GAME OVER! Winner: " + self.winner_text)
+            self.log("GAME OVER!  Winner: " + self.winner_text)
             self._save_stats(self.winner_text)
         else:
             self.log("Click 'Next Round' to continue.")
 
-    # =========================================================================
-    # STATS - Persistent save/load (Optional Feature: Logging & Statistics)
-    # =========================================================================
-
+    # ── Logging / Stats ───────────────────────────────────────────────────────
     def _log_game_start(self):
-        """Write game start to log file."""
         ts = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        line = "[" + ts + "] === NEW GAME STARTED (limit: " + str(self.score_limit) + ") ===\n"
-        with open(self.LOG_FILE, "a") as f:
-            f.write(line)
+        try:
+            with open(self.LOG_FILE, "a", encoding="utf-8") as f:
+                f.write("[" + ts + "] === NEW GAME | Player: " + self.player_name +
+                        " | Limit: " + str(self.score_limit) + " ===\n")
+        except OSError: pass
 
     def _log_hand_dealt(self):
-        """Write dealt hands to log file."""
         ts = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        with open(self.LOG_FILE, "a") as f:
-            f.write("[" + ts + "] Round " + str(self.round_number) + " dealt.\n")
-            for player in self.players:
-                hand_str = " ".join(c.label() for c in player.hand)
-                f.write("  " + player.name + ": " + hand_str + "\n")
+        try:
+            with open(self.LOG_FILE, "a", encoding="utf-8") as f:
+                f.write("[" + ts + "] Round " + str(self.round_number) + " dealt.\n")
+                for p in self.players:
+                    f.write("  " + p.name + ": " +
+                            " ".join(c.label() for c in p.hand) + "\n")
+        except OSError: pass
+
+    def log(self, text):
+        self.message_log.append(text)
+        ts = datetime.datetime.now().strftime("%H:%M:%S")
+        try:
+            with open(self.LOG_FILE, "a", encoding="utf-8") as f:
+                f.write("[" + ts + "] " + text + "\n")
+        except OSError: pass
 
     def _save_stats(self, winner_name):
-        """Save game result to scores.json."""
-        stats = self.load_stats()
+        stats = self._load_stats_raw()
         stats["games_played"] = stats.get("games_played", 0) + 1
-        if winner_name == "You":
+        if self.player_name in winner_name:
             stats["games_won"]  = stats.get("games_won",  0) + 1
-            stats["games_lost"] = stats.get("games_lost", 0)
         else:
-            stats["games_won"]  = stats.get("games_won",  0)
             stats["games_lost"] = stats.get("games_lost", 0) + 1
-        best = stats.get("best_score", 9999)
-        my_score = self.total_scores["You"]
-        if my_score < best:
+        my_score = self.total_scores[self.player_name]
+        if my_score < stats.get("best_score", 9999):
             stats["best_score"] = my_score
-        with open(self.STATS_FILE, "w") as f:
-            json.dump(stats, f, indent=2)
+        stats["last_player"] = self.player_name
+        try:
+            with open(self.STATS_FILE, "w", encoding="utf-8") as f:
+                json.dump(stats, f, indent=2)
+        except OSError: pass
 
-    def load_stats(self):
-        """Load saved stats. Returns empty dict if no file yet."""
+    def _load_stats_raw(self):
         if os.path.exists(self.STATS_FILE):
-            with open(self.STATS_FILE, "r") as f:
-                return json.load(f)
+            try:
+                with open(self.STATS_FILE, "r", encoding="utf-8") as f:
+                    return json.load(f)
+            except Exception: pass
         return {}
 
     def reset_stats(self):
-        """Erase all saved statistics."""
         if os.path.exists(self.STATS_FILE):
-            os.remove(self.STATS_FILE)
+            try: os.remove(self.STATS_FILE)
+            except OSError: pass
 
-    # =========================================================================
-    # HELPERS for GUI
-    # =========================================================================
+    def stats_text(self):
+        s = self._load_stats_raw()
+        if not s:
+            return "No stats yet."
+        return ("Player    : " + s.get("last_player","—")       + "\n"
+                "Played    : " + str(s.get("games_played",0))   + "\n"
+                "Won       : " + str(s.get("games_won",0))      + "\n"
+                "Lost      : " + str(s.get("games_lost",0))     + "\n"
+                "Best score: " + str(s.get("best_score","—")))
 
-    def log(self, text):
-        """Add a line to the message log shown in GUI."""
-        self.message_log.append(text)
-        # Also write to file
-        ts = datetime.datetime.now().strftime("%H:%M:%S")
-        with open(self.LOG_FILE, "a") as f:
-            f.write("[" + ts + "] " + text + "\n")
-
+    # ── GUI helpers ───────────────────────────────────────────────────────────
     def table_state(self):
-        """Returns dict of what each player has played this trick."""
-        state = {"AI 2": "--", "AI 1": "--", "AI 3": "--", "You": "--"}
+        state = {p.name: "--" for p in self.players}
         for idx, card in self.trick_cards:
             state[self.players[idx].name] = card.label()
         return state
 
     def current_turn_name(self):
-        """Returns whose turn it is."""
-        if self.game_over:
-            return "Game Over"
-        if self.round_over:
-            return "Round Over"
+        if self.game_over:  return "Game Over"
+        if self.round_over: return "Round Over"
         return self.players[self.current_index].name
 
+    def dealer_name(self):
+        return self.players[self.dealer_index].name
+
     def status_text(self):
-        """Status string shown in sidebar."""
-        return (
-            "Round:  " + str(self.round_number) + "\n"
-            "Trick:  " + str(min(self.trick_number, 13)) + " / 13\n"
-            "Hearts: " + ("Broken!" if self.hearts_broken else "Not Broken") + "\n"
-            "Turn:   " + self.current_turn_name()
-        )
-
-    def stats_text(self):
-        """Formatted lifetime stats string."""
-        s = self.load_stats()
-        if not s:
-            return "No stats yet."
-        return (
-            "Games played: " + str(s.get("games_played", 0)) + "\n"
-            "Won: "          + str(s.get("games_won",    0)) + "\n"
-            "Lost: "         + str(s.get("games_lost",   0)) + "\n"
-            "Best score: "   + str(s.get("best_score",   "--"))
-        )
-
-# =============================================================================
-# CONCEPTS USED:
-#   Composition:  HeartsGame owns Player objects and Deck
-#   json module:  saves stats as a text file between sessions
-#   os module:    checks if files exist before opening them
-#   datetime:     timestamps for the game log
-# =============================================================================
+        return ("Round  : " + str(self.round_number) + "\n"
+                "Dealer : " + self.dealer_name()     + "\n"
+                "Trick  : " + str(min(self.trick_number,13)) + " / 13\n"
+                "Hearts : " + ("Broken ♥" if self.hearts_broken else "Not broken") + "\n"
+                "Turn   : " + self.current_turn_name())

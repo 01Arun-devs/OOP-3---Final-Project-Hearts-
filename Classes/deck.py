@@ -1,7 +1,11 @@
 # =============================================================================
 # FILE:    deck.py
 # PURPOSE: A full 52-card deck. Builds, shuffles, and deals cards.
-# AUTHOR:  Group 2 - COSC-2200-03
+# COURSE:  COSC-2200-03 | Durham College | Group 2
+# AUTHOR:  JEEL — OOP Structure (Core Classes)
+# =============================================================================
+# OOP CONCEPT — COMPOSITION:
+#   Deck "has" Card objects inside it. Deck is composed of Cards.
 # =============================================================================
 
 import random
@@ -12,34 +16,23 @@ class Deck:
     """A standard 52-card deck."""
 
     def __init__(self):
-        """Build all 52 cards (4 suits x 13 ranks)."""
+        """Build all 52 cards (4 suits × 13 ranks)."""
         self.cards = []
         for suit in Card.SUITS:
             for rank in Card.RANKS:
                 self.cards.append(Card(suit, rank))
 
     def shuffle(self):
-        """Randomly mix the deck."""
+        """Randomly mix the deck using Fisher-Yates algorithm."""
         random.shuffle(self.cards)
 
     def deal(self, num_players):
         """
-        Deal all 52 cards evenly.
-        Returns a list of hands - one list of cards per player.
-        Uses % (modulo) to cycle through players evenly.
+        Deal all 52 cards evenly to num_players players.
+        Returns a list of hands — one list of Card objects per player.
+        Uses modulo to cycle through players like dealing around a real table.
         """
-        hands = []
-        for i in range(num_players):
-            hands.append([])
-
-        for i in range(len(self.cards)):
-            player_index = i % num_players
-            hands[player_index].append(self.cards[i])
-
+        hands = [[] for _ in range(num_players)]
+        for i, card in enumerate(self.cards):
+            hands[i % num_players].append(card)
         return hands
-
-# =============================================================================
-# CONCEPTS USED:
-#   random.shuffle(): Python built-in, randomly rearranges a list
-#   % modulo:         gives remainder after division, used to cycle 0,1,2,3,0,1,2,3
-# =============================================================================
