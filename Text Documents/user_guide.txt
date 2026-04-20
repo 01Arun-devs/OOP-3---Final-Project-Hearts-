@@ -1,123 +1,209 @@
-==============================================================================
-  HEARTS CARD GAME — USER GUIDE
-  Group 2  |  COSC-2200-03  |  Durham College
-==============================================================================
+# ==============================================================================
+HEARTS CARD GAME — USER GUIDE
+Group 2  |  COSC-2200-03  |  Durham College
 
 HOW TO START
 ─────────────
+
 1. Put all 6 files in one folder:
-     main.py, gui.py, logic.py, player.py, deck.py, card.py
-
-2. Open Terminal (Cmd + Space → type Terminal → Enter)
-
-3. Navigate to your folder:
-     cd Desktop/Games
-
-4. Run the game:
-     python3 main.py
-
-5. The game window opens. Choose 50 or 100 Points, then click Start Game.
-
+   main.py, gui.py, logic.py, player.py, deck.py, card.py
+1. Install the required library (first time only):
+   pip install Pillow
+1. Open Terminal or Command Prompt
+1. Navigate to your folder:
+   cd Desktop/hearts_final
+1. Run the game:
+   python main.py
+1. The game window opens. Type your name, choose 50 or 100 Points,
+   then click Start Game.
 
 THE MENU
 ─────────
-  Start Game     → Choose score limit and begin
-  Rules          → Full rules popup
-  My Statistics  → See your win/loss record
-  Exit           → Close the game
+Start Game    → Enter your name, pick score limit, and begin
+Rules         → Full rules popup
+Statistics    → See your win/loss record and best score
+Exit          → Close the game
 
+YOUR NAME
+──────────
+Type your name before starting. It shows on the table and
+saves with your stats so your record is linked to you.
 
 SCORE LIMIT
 ────────────
-  50 Points  — shorter game (~20 minutes)
-  100 Points — longer game  (~45 minutes)
+50 Points  — shorter game (around 20 minutes)
+100 Points — longer game  (around 45 minutes)
 
-The game ends when any player reaches the limit.
-The player with the LOWEST score wins!
-
+The game ends the moment any player reaches the limit.
+The player with the LOWEST score wins.
 
 THE TABLE
 ──────────
-  AI 2 ★ sits at the TOP    (Smart AI - may try Shoot the Moon)
-  AI 1   sits on the LEFT
-  AI 3   sits on the RIGHT
-  You    sit at the BOTTOM
+AI 2 ★ sits at the TOP    (Smart AI — may try Shoot the Moon)
+AI 1   sits on the LEFT
+AI 3   sits on the RIGHT
+You    sit at the BOTTOM
 
-  Centre boxes show what each player played this trick.
-  The right panel shows all game events.
-  The left panel shows total scores and game status.
+Centre of the table shows the cards played this trick.
+Left panel shows total scores, round scores, and game status.
+Right panel shows the full move log as the game plays out.
 
+The dealer label shows who is dealing this round.
+The dealer rotates clockwise after every round.
+
+ANIMATIONS
+───────────
+When the game starts, cards are shuffled and dealt automatically.
+Watch each card fly from the deck to the player seats.
+
+When any player plays a card, it flies to the centre of the
+table and flips over so you can see what was played.
+
+When someone wins a trick, all 4 cards fly to their side.
+A banner shows who won the trick.
+
+These animations happen for every player including the AI.
 
 YOUR HAND
 ──────────
-  Your 13 cards are shown at the bottom.
-  Bright yellow cards = you CAN play them (click to play)
-  Grey cards          = not allowed right now
+Your 13 cards are shown at the bottom of the screen.
 
-  Hover your mouse over any card to see its name and point value.
+Gold highlight = you CAN play this card (click to play)
+Grey card      = not allowed right now
 
+Valid cards are raised slightly so they are easy to spot.
+Hover your mouse over any card to see the full card name
+and how many penalty points it is worth.
 
 PLAYING A CARD
 ───────────────
-  Option 1: Click a bright yellow card
-  Option 2: Press Enter to play the first valid card automatically
-  Option 3: Click "Show Valid Cards" to see which cards are allowed
+Option 1: Click a gold highlighted card
+Option 2: Press Enter to play the first valid card automatically
+Option 3: Click “Valid Cards” button to see a list of allowed cards
 
+PAUSE AND RESUME
+─────────────────
+Click the orange Pause button at any point to stop the game.
+A dark overlay appears on the table with a PAUSED message.
+Click Resume (same button) or press Space to continue.
+The game picks up exactly where you left off.
 
 RULES SUMMARY
 ──────────────
-  Follow Suit:   If the first card played is a Club, you must play
-                 a Club if you have one. Same for all suits.
+Who goes first:
+The player holding the 2 of Clubs always goes first.
+That player must play the 2 of Clubs — no other choice.
 
-  No matching:   If you have no cards of the lead suit, you can
-                 play any card (great chance to dump penalty cards!)
+Follow Suit:
+The first card played sets the suit for that round.
+If the first card is a Spade, you must play a Spade
+if you have one. Same rule applies to all suits.
 
-  Hearts Lead:   You cannot lead with a Heart until Hearts are
-                 "broken" (someone played a Heart earlier).
+No matching suit:
+If you have no cards of the lead suit, you can play
+anything. This is your chance to dump penalty cards
+onto someone else’s trick.
 
-  Scoring:
-    ♥ Each Heart     = 1 penalty point
-    ♠ Queen of Spades = 5 penalty points
-    Lowest score WINS
+Hearts Lead:
+You cannot start a round with a Heart until Hearts are
+broken. Hearts break the moment anyone plays a Heart.
+Once broken, Hearts can be led freely for the rest of
+that hand. Hearts reset at the start of every new hand.
 
-  Shoot the Moon:
-    If one player collects ALL Hearts + Queen of Spades (18 pts):
-    → That player scores 0
-    → Everyone else scores +18
-    Watch AI 2 ★ — it tries this strategy!
+Only Hearts left:
+If every card in your hand is a Heart, you must play
+one even if Hearts are not broken yet. No penalty for
+this — it is an official rule.
 
+Scoring:
+♥  Each Heart card  = 1 penalty point
+♠  Queen of Spades  = 5 penalty points
+All other cards     = 0 points
+Total per round     = 18 points maximum
+Lowest score WINS
+
+Shoot the Moon:
+If one player collects ALL 13 Hearts and the Queen of
+Spades in one hand (all 18 points):
+→ That player scores 0 for the round
+→ Everyone else gets +18 added to their score
+Watch AI 2 ★ — it switches to this strategy when it
+is holding enough penalty cards.
+
+AI PLAYERS
+───────────
+AI 1 and AI 3 — Basic defensive strategy
+They avoid winning tricks that have penalty cards.
+They dump the Queen of Spades on others when they can.
+They play the lowest card they can get away with.
+
+AI 2 ★ — Smart AI
+Normally plays defensively like AI 1 and AI 3.
+But if it collects enough penalty cards, it switches
+strategy and starts trying to win every single trick.
+It is going for Shoot the Moon.
+This can change the game dramatically — if it succeeds,
+everyone else gets 18 points at once.
 
 BETWEEN ROUNDS
 ───────────────
-  After all 13 tricks, scores are updated.
-  Click "Next Round" to deal new cards.
-  The game continues until someone hits the score limit.
-
+After all 13 tricks are played, scores are updated.
+The round summary shows points gained and total scores.
+Click Next Round to shuffle and deal fresh cards.
+The shuffle and deal animation plays again.
+The game continues until someone hits the score limit.
 
 KEYBOARD SHORTCUTS
 ───────────────────
-  Enter   →  Play the first valid card
-  Escape  →  Quit (asks for confirmation)
+Enter   →  Play the first valid card automatically
+Space   →  Pause or Resume the game
+Escape  →  Quit (asks for confirmation first)
 
+STATISTICS
+───────────
+Your stats are saved automatically after every completed game.
+Go to Statistics from the main menu to see:
+- Your name
+- Total games played
+- Games won and lost
+- Your best score ever (lowest total)
+
+You can reset your stats from the Statistics screen.
+Stats are linked to the last name you played with.
 
 FILES CREATED WHILE PLAYING
 ─────────────────────────────
-  scores.json  — your win/loss record (loaded next time you play)
-  game_log.txt — every card played, timestamped
-
+scores.json  — your win/loss record, loaded every time you play
+game_log.txt — full record of every card played with timestamps
+cards/       — folder of card images, created automatically
 
 TROUBLESHOOTING
 ────────────────
-  "python3: command not found"
-    → Download Python 3 from https://python.org
+“No module named PIL” or “No module named Pillow”
+→ Run:  pip install Pillow
+→ Then run the game again
 
-  Game window does not open
-    → Make sure all 6 .py files are in the SAME folder
-    → Run main.py, not gui.py
+“python: command not found”
+→ Download Python 3 from https://python.org
+→ Make sure Python is added to your system PATH
 
-  Cards not showing
-    → Close the window and run python3 main.py again
+Game window does not open
+→ Make sure all 6 files are in the SAME folder
+→ Always run main.py, not gui.py or any other file
 
-==============================================================================
-  Group 2 — Arun Kumar, Sujay Tailor, Jeel Suthar, Darsh Patel, Rudra Chauhan
-==============================================================================
+Cards folder missing or cards look wrong
+→ Delete the cards/ folder if it exists
+→ Run the game again — it will rebuild automatically
+
+Game freezes during animation
+→ Wait a moment, animations complete on their own
+→ Do not click repeatedly during animations
+
+Scores not saving
+→ Make sure you finish a complete game (someone hits the limit)
+→ Stats only save when a full game is completed
+
+# ==============================================================================
+Group 2
+Arun Kumar  |  Darsh Patel  |  Jeel Suthar  |  Rudra Chauhan  |  Sujay Tailor
+COSC-2200-03  |  Durham College
